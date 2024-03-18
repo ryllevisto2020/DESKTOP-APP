@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "NETWORK_TCP_IP_SOCKET_CLIENT/1.0.0": {
+        "runtime": {
+          "NETWORK_TCP_IP_SOCKET_CLIENT.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "NETWORK_TCP_IP_SOCKET_CLIENT/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

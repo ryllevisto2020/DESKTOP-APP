@@ -1,0 +1,17 @@
+StringBuilder
+MysqlConnection
+MysqlCommand
+MysqlDataReader
+FileInfo
+Path
+Environment
+My.Settings
+Image
+DirectoryInfo
+StreamReader
+StreamWriter
+Stream
+WebClient
+
+NAMESPACE:
+System.IO -> FOR INPUT/OUTPUT -> READ/WRITE/MOVE/COPY FILES AND DIRECTORY(FOLDER) -> CREATE FILES AND DIRECTORY(FOLDER)

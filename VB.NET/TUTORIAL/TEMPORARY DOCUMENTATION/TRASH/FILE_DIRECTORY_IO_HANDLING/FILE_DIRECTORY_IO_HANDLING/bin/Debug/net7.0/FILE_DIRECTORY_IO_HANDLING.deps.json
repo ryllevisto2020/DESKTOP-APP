@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "FILE_DIRECTORY_IO_HANDLING/1.0.0": {
+        "runtime": {
+          "FILE_DIRECTORY_IO_HANDLING.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "FILE_DIRECTORY_IO_HANDLING/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

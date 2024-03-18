@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "x6W9l1BIPIYjdCG8aa0r4/bX94LdWz4ahokXmxDvRkYrG0TY4pSVaOoBnhrINlf5WBPl3yRVDa85cyazBcbL0A==",
+  "success": true,
+  "projectFilePath": "E:\\PROJECT - SCRATCH\\PRACTICE CODE\\VB.NET\\TUTORIAL\\TEMPORARY DOCUMENTATION\\DATABASE_MYSQL\\DATABASE_MYSQL\\DATABASE_MYSQL.vbproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\rylle\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.1\\microsoft.extensions.logging.abstractions.7.0.1.nupkg.sha512",
+    "C:\\Users\\rylle\\.nuget\\packages\\mysqlconnector\\2.3.5\\mysqlconnector.2.3.5.nupkg.sha512"
+  ],
+  "logs": []
+}
