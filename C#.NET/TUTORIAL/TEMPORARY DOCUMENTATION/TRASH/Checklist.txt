@@ -1,0 +1,20 @@
+C# CLI CHECKLIST
+
+Variables
+Variables Initializes
+Array
+Array Initialize
+Array Size
+ArrayList
+Class Object
+Interface Object
+Class Object Inheritance
+Array Object
+ArrayList Object
+ArrayAssociate
+OOP
+Constructor
+Function
+Entity Framework
+DBContext
+Dependency Injection
