@@ -1,0 +1,30 @@
+JAVA CLI CHECKLIST
+
+Variables
+Variables Initializes
+Array
+Array Initialize
+Array Size
+ArrayList
+Class Object
+Interface Object
+Class Object Inheritance
+Array Object
+ArrayList Object
+ArrayAssociate
+JSONObject
+JSONArray
+HTTPUrlConnection
+Socket & Tcp/ip
+Constructor
+OOP
+Function
+Access Config Properties
+Conditional Statement
+Loop Statement
+Return Statement
+Multi Thread/Threading
+Get Path
+Copy/Move File
+ssh
+Http Request
