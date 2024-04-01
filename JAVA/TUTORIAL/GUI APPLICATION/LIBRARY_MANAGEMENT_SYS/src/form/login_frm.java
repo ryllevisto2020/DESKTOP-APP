@@ -7,7 +7,12 @@ package form;
 import com.formdev.flatlaf.*;
 import functions.database;
 import functions.login;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.Reader;
 import java.sql.SQLException;
+import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 /**

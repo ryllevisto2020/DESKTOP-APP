@@ -41,6 +41,7 @@ public class login {
             }
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(new login_frm(),"Message: "+ex.getMessage(),"Databse Error!",JOptionPane.ERROR_MESSAGE);
+            //JOptionPane.showMessageDialog(new login_frm(), "Database not found!", "DB Error!",JOptionPane.OK_OPTION);
             /*if(ex.getErrorCode()==1049){
                 
             }

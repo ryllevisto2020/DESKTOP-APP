@@ -5,6 +5,8 @@
 package functions;
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.Base64;
+import java.util.Base64.Encoder;
 import java.util.logging.Logger;
 /**
  *

@@ -11,13 +11,15 @@ import net.sf.jasperreports.engine.xml.JRXmlLoader;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import net.sf.jasperreports.engine.JasperCompileManager;
+import net.sf.jasperreports.engine.JasperExportManager;
 import net.sf.jasperreports.engine.JasperFillManager;
 import net.sf.jasperreports.engine.JasperPrint;
 import net.sf.jasperreports.engine.JasperReport;
 import net.sf.jasperreports.engine.design.JRDesignQuery;
+import net.sf.jasperreports.export.pdf.PdfDocument;
 import net.sf.jasperreports.view.JasperViewer;
 
-/**
+/** 
  *
  * @author rylle
  */
@@ -57,5 +59,8 @@ public class report_view {
         
         /* Create Jasper Viewer */
         JasperViewer.viewReport(print);
+        
+        /* Create Jasper Export Manager */
+        JasperExportManager.exportReportToPdfFile(print, "E:\\PROJECT - SCRATCH\\PRACTICE CODE\\2 DESKTOP APP AND CLI APP\\JAVA\\TUTORIAL\\TEMPORARY DOCUMENTATION\\REPORT VIEW\\app");
     }
 }

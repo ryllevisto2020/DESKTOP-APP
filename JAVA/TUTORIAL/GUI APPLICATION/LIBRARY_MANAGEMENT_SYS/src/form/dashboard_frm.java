@@ -13,6 +13,7 @@ import java.util.Date;
 import java.util.Locale;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 /*
@@ -1611,7 +1612,7 @@ public class dashboard_frm extends javax.swing.JFrame {
                 model.addRow((Object[]) dashboard.logs().get(i));
             }
         } catch (SQLException ex) {
-            Logger.getLogger(dashboard_frm.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(this,"Message: "+ex.getMessage(),"Databse Error!",JOptionPane.ERROR_MESSAGE);
         }
         jLabel78.setText(getName());
         jLabel67.setText(getName());
@@ -1634,7 +1635,7 @@ public class dashboard_frm extends javax.swing.JFrame {
             String date = (cal.get(Calendar.MONTH)+1)+"/"+cal.get(Calendar.DATE)+"/"+cal.get(Calendar.YEAR);
             jLabel14.setText(Integer.toString(dashboard.count_totalReturned(date)));
         } catch (SQLException ex) {
-            Logger.getLogger(dashboard_frm.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(this,"Message: "+ex.getMessage(),"Databse Error!",JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_jPanel12ComponentShown
 

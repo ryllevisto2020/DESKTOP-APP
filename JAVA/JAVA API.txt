@@ -1,0 +1,14 @@
+MODULE java.base
+-java.util
+-java.io
+-java.net
+-java.lang
+-java.math
+-java.security
+-java.time
+-java.util
+
+MODULE java.desktop
+-java.awt
+-javax.print
+-javax.swing
