@@ -1,24 +1,24 @@
 
 import java.awt.Color;
+import java.awt.Dialog;
+import java.awt.Dimension;
 import java.awt.Font;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
 import java.awt.Image;
-import java.awt.Point;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.BorderFactory;
 import javax.swing.GroupLayout;
-import javax.swing.Icon;
 import javax.swing.ImageIcon;
+import javax.swing.JDesktopPane;
+import javax.swing.JDialog;
+import javax.swing.JFrame;
+import javax.swing.JInternalFrame;
 import javax.swing.JLabel;
-import javax.swing.JMenu;
 import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-import javax.swing.JTable;
 import javax.swing.SwingConstants;
 import javax.swing.WindowConstants;
-import javax.swing.table.DefaultTableModel;
 import org.netbeans.lib.awtextra.AbsoluteConstraints;
 import org.netbeans.lib.awtextra.AbsoluteLayout;
 
@@ -95,12 +95,14 @@ private static ImageIcon rightIconResize;
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel5 = new JPanel();
-        jLabel7 = new JLabel();
-        jLabel8 = new JLabel();
         jPanel4 = new JPanel();
         jLabel3 = new JLabel();
         jLabel4 = new JLabel();
+        jPanel5 = new JPanel();
+        jLabel7 = new JLabel();
+        jLabel8 = new JLabel();
+        jDialog1 = new JDialog();
+        jPanel6 = new JPanel();
         jPanel1 = new JPanel();
         jPanel2 = new JPanel();
         jLabel1 = new JLabel();
@@ -109,6 +111,42 @@ private static ImageIcon rightIconResize;
         jLabel10 = new JLabel();
         jLabel11 = new JLabel();
         jPanel3 = new JPanel();
+        jInternalFrame1 = new JInternalFrame();
+
+        jPanel4.setBackground(new Color(153, 153, 153));
+        jPanel4.setBorder(BorderFactory.createLineBorder(new Color(255, 255, 255)));
+        jPanel4.setName("jPanel4"); // NOI18N
+
+        jLabel3.setFont(new Font("Segoe UI Semibold", 1, 18)); // NOI18N
+        jLabel3.setForeground(new Color(255, 255, 255));
+        jLabel3.setHorizontalAlignment(SwingConstants.CENTER);
+        jLabel3.setText("  ADD USER");
+        jLabel3.setBorder(BorderFactory.createLineBorder(new Color(255, 255, 255)));
+        jLabel3.setName("jLabel3"); // NOI18N
+
+        jLabel4.setFont(new Font("Segoe UI Semibold", 1, 18)); // NOI18N
+        jLabel4.setForeground(new Color(255, 255, 255));
+        jLabel4.setHorizontalAlignment(SwingConstants.CENTER);
+        jLabel4.setText("  ALL USER");
+        jLabel4.setBorder(BorderFactory.createLineBorder(new Color(255, 255, 255)));
+        jLabel4.setName("jLabel4"); // NOI18N
+
+        GroupLayout jPanel4Layout = new GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(jPanel4Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGroup(jPanel4Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel3, GroupLayout.PREFERRED_SIZE, 230, GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4, GroupLayout.PREFERRED_SIZE, 230, GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 0, 0))
+        );
+        jPanel4Layout.setVerticalGroup(jPanel4Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addComponent(jLabel3, GroupLayout.PREFERRED_SIZE, 60, GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(jLabel4, GroupLayout.PREFERRED_SIZE, 60, GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
 
         jPanel5.setBackground(new Color(153, 153, 153));
         jPanel5.setBorder(BorderFactory.createLineBorder(new Color(255, 255, 255)));
@@ -145,39 +183,27 @@ private static ImageIcon rightIconResize;
                 .addContainerGap())
         );
 
-        jPanel4.setBackground(new Color(153, 153, 153));
-        jPanel4.setBorder(BorderFactory.createLineBorder(new Color(255, 255, 255)));
-        jPanel4.setName("jPanel4"); // NOI18N
+        jDialog1.setModalityType(Dialog.ModalityType.APPLICATION_MODAL);
+        jDialog1.setName("jDialog1"); // NOI18N
 
-        jLabel3.setFont(new Font("Segoe UI Semibold", 1, 18)); // NOI18N
-        jLabel3.setForeground(new Color(255, 255, 255));
-        jLabel3.setHorizontalAlignment(SwingConstants.CENTER);
-        jLabel3.setText("  ADD USER");
-        jLabel3.setBorder(BorderFactory.createLineBorder(new Color(255, 255, 255)));
-        jLabel3.setName("jLabel3"); // NOI18N
+        jPanel6.setName("jPanel6"); // NOI18N
 
-        jLabel4.setFont(new Font("Segoe UI Semibold", 1, 18)); // NOI18N
-        jLabel4.setForeground(new Color(255, 255, 255));
-        jLabel4.setHorizontalAlignment(SwingConstants.CENTER);
-        jLabel4.setText("  ALL USER");
-        jLabel4.setBorder(BorderFactory.createLineBorder(new Color(255, 255, 255)));
-        jLabel4.setName("jLabel4"); // NOI18N
-
-        GroupLayout jPanel4Layout = new GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(jPanel4Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGroup(jPanel4Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3, GroupLayout.PREFERRED_SIZE, 230, GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4, GroupLayout.PREFERRED_SIZE, 230, GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 0, 0))
+        GroupLayout jPanel6Layout = new GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(jPanel6Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+            .addGap(0, 848, Short.MAX_VALUE)
         );
-        jPanel4Layout.setVerticalGroup(jPanel4Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addComponent(jLabel3, GroupLayout.PREFERRED_SIZE, 60, GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(jLabel4, GroupLayout.PREFERRED_SIZE, 60, GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+        jPanel6Layout.setVerticalGroup(jPanel6Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+            .addGap(0, 521, Short.MAX_VALUE)
+        );
+
+        GroupLayout jDialog1Layout = new GroupLayout(jDialog1.getContentPane());
+        jDialog1.getContentPane().setLayout(jDialog1Layout);
+        jDialog1Layout.setHorizontalGroup(jDialog1Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel6, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jDialog1Layout.setVerticalGroup(jDialog1Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel6, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
@@ -272,6 +298,21 @@ private static ImageIcon rightIconResize;
         jPanel3.setBackground(new Color(204, 204, 204));
         jPanel3.setName("jPanel3"); // NOI18N
         jPanel3.setLayout(new AbsoluteLayout());
+
+        jInternalFrame1.setName("jInternalFrame1"); // NOI18N
+        jInternalFrame1.setVisible(true);
+
+        GroupLayout jInternalFrame1Layout = new GroupLayout(jInternalFrame1.getContentPane());
+        jInternalFrame1.getContentPane().setLayout(jInternalFrame1Layout);
+        jInternalFrame1Layout.setHorizontalGroup(jInternalFrame1Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        jInternalFrame1Layout.setVerticalGroup(jInternalFrame1Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        jPanel3.add(jInternalFrame1, new AbsoluteConstraints(70, 30, 830, 520));
+
         jPanel1.add(jPanel3, new AbsoluteConstraints(230, 0, 1070, 780));
 
         GroupLayout layout = new GroupLayout(getContentPane());
@@ -342,6 +383,9 @@ private static ImageIcon rightIconResize;
 
     private void jLabel10MouseClicked(MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseClicked
         // TODO add your handling code here:
+        jDialog1.setSize(new Dimension(848, 521));
+        jDialog1.setLocationRelativeTo(null);
+        jDialog1.show();
     }//GEN-LAST:event_jLabel10MouseClicked
 
     private void jLabel11MouseClicked(MouseEvent evt) {//GEN-FIRST:event_jLabel11MouseClicked
@@ -389,6 +433,8 @@ private static ImageIcon rightIconResize;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    JDialog jDialog1;
+    JInternalFrame jInternalFrame1;
     JLabel jLabel1;
     JLabel jLabel10;
     JLabel jLabel11;
@@ -403,5 +449,6 @@ private static ImageIcon rightIconResize;
     JPanel jPanel3;
     JPanel jPanel4;
     JPanel jPanel5;
+    JPanel jPanel6;
     // End of variables declaration//GEN-END:variables
 }
