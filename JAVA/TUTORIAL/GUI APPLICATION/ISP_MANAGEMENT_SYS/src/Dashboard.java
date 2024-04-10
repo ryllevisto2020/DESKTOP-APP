@@ -1,4 +1,7 @@
 
+import com.formdev.flatlaf.FlatIntelliJLaf;
+import com.formdev.flatlaf.FlatLaf;
+import com.formdev.flatlaf.FlatLightLaf;
 import java.awt.Color;
 import java.awt.Dialog;
 import java.awt.Dimension;
@@ -11,14 +14,23 @@ import java.awt.event.MouseEvent;
 import javax.swing.BorderFactory;
 import javax.swing.GroupLayout;
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JDesktopPane;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JInternalFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTabbedPane;
+import javax.swing.JTable;
+import javax.swing.LayoutStyle;
 import javax.swing.SwingConstants;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
 import javax.swing.WindowConstants;
+import javax.swing.border.LineBorder;
+import javax.swing.table.DefaultTableModel;
 import org.netbeans.lib.awtextra.AbsoluteConstraints;
 import org.netbeans.lib.awtextra.AbsoluteLayout;
 
@@ -84,6 +96,12 @@ private static ImageIcon rightIconResize;
         Image boxImage = boxIcon.getImage();
         ImageIcon boxIconResize = new ImageIcon(boxImage.getScaledInstance(30, 30, 0));
         jLabel6.setIcon(boxIconResize);
+        
+        /* Dashboard User Icon*/
+        ImageIcon dashUserIcon = new ImageIcon(getClass().getResource("/users-alt.png"));
+        Image dashUserImage =  dashUserIcon.getImage();
+        ImageIcon dashUserIconResize =new ImageIcon(dashUserImage.getScaledInstance(45, 45, 0));
+        jLabel20.setIcon(dashUserIconResize);
     }
 
     /**
@@ -95,14 +113,14 @@ private static ImageIcon rightIconResize;
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel4 = new JPanel();
-        jLabel3 = new JLabel();
-        jLabel4 = new JLabel();
         jPanel5 = new JPanel();
         jLabel7 = new JLabel();
         jLabel8 = new JLabel();
         jDialog1 = new JDialog();
         jPanel6 = new JPanel();
+        jPanel4 = new JPanel();
+        jLabel3 = new JLabel();
+        jLabel4 = new JLabel();
         jPanel1 = new JPanel();
         jPanel2 = new JPanel();
         jLabel1 = new JLabel();
@@ -110,43 +128,54 @@ private static ImageIcon rightIconResize;
         jLabel6 = new JLabel();
         jLabel10 = new JLabel();
         jLabel11 = new JLabel();
+        jLabel16 = new JLabel();
+        jLabel17 = new JLabel();
         jPanel3 = new JPanel();
-        jInternalFrame1 = new JInternalFrame();
-
-        jPanel4.setBackground(new Color(153, 153, 153));
-        jPanel4.setBorder(BorderFactory.createLineBorder(new Color(255, 255, 255)));
-        jPanel4.setName("jPanel4"); // NOI18N
-
-        jLabel3.setFont(new Font("Segoe UI Semibold", 1, 18)); // NOI18N
-        jLabel3.setForeground(new Color(255, 255, 255));
-        jLabel3.setHorizontalAlignment(SwingConstants.CENTER);
-        jLabel3.setText("  ADD USER");
-        jLabel3.setBorder(BorderFactory.createLineBorder(new Color(255, 255, 255)));
-        jLabel3.setName("jLabel3"); // NOI18N
-
-        jLabel4.setFont(new Font("Segoe UI Semibold", 1, 18)); // NOI18N
-        jLabel4.setForeground(new Color(255, 255, 255));
-        jLabel4.setHorizontalAlignment(SwingConstants.CENTER);
-        jLabel4.setText("  ALL USER");
-        jLabel4.setBorder(BorderFactory.createLineBorder(new Color(255, 255, 255)));
-        jLabel4.setName("jLabel4"); // NOI18N
-
-        GroupLayout jPanel4Layout = new GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(jPanel4Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGroup(jPanel4Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3, GroupLayout.PREFERRED_SIZE, 230, GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4, GroupLayout.PREFERRED_SIZE, 230, GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 0, 0))
-        );
-        jPanel4Layout.setVerticalGroup(jPanel4Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addComponent(jLabel3, GroupLayout.PREFERRED_SIZE, 60, GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(jLabel4, GroupLayout.PREFERRED_SIZE, 60, GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
+        jPanel7 = new JPanel();
+        jPanel11 = new JPanel();
+        jLabel19 = new JLabel();
+        jLabel39 = new JLabel();
+        jLabel37 = new JLabel();
+        jLabel38 = new JLabel();
+        jPanel12 = new JPanel();
+        jLabel34 = new JLabel();
+        jLabel35 = new JLabel();
+        jLabel36 = new JLabel();
+        jPanel14 = new JPanel();
+        jLabel40 = new JLabel();
+        jLabel22 = new JLabel();
+        jLabel41 = new JLabel();
+        jPanel15 = new JPanel();
+        jLabel21 = new JLabel();
+        jPanel19 = new JPanel();
+        jLabel28 = new JLabel();
+        jPanel16 = new JPanel();
+        jLabel23 = new JLabel();
+        jLabel42 = new JLabel();
+        jLabel43 = new JLabel();
+        jPanel17 = new JPanel();
+        jLabel26 = new JLabel();
+        jPanel18 = new JPanel();
+        jLabel27 = new JLabel();
+        jPanel20 = new JPanel();
+        jLabel29 = new JLabel();
+        jPanel21 = new JPanel();
+        jLabel30 = new JLabel();
+        jPanel9 = new JPanel();
+        jLabel20 = new JLabel();
+        jLabel31 = new JLabel();
+        jLabel33 = new JLabel();
+        jScrollPane1 = new JScrollPane();
+        jTable1 = new JTable();
+        jLabel32 = new JLabel();
+        jLabel5 = new JLabel();
+        jLabel9 = new JLabel();
+        jPanel8 = new JPanel();
+        jLabel13 = new JLabel();
+        jLabel12 = new JLabel();
+        jLabel14 = new JLabel();
+        jLabel15 = new JLabel();
+        jLabel18 = new JLabel();
 
         jPanel5.setBackground(new Color(153, 153, 153));
         jPanel5.setBorder(BorderFactory.createLineBorder(new Color(255, 255, 255)));
@@ -206,9 +235,45 @@ private static ImageIcon rightIconResize;
             .addComponent(jPanel6, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
+        jPanel4.setBackground(new Color(153, 153, 153));
+        jPanel4.setBorder(BorderFactory.createLineBorder(new Color(255, 255, 255)));
+        jPanel4.setName("jPanel4"); // NOI18N
+
+        jLabel3.setFont(new Font("Segoe UI Semibold", 1, 18)); // NOI18N
+        jLabel3.setForeground(new Color(255, 255, 255));
+        jLabel3.setHorizontalAlignment(SwingConstants.CENTER);
+        jLabel3.setText("  ADD USER");
+        jLabel3.setBorder(BorderFactory.createLineBorder(new Color(255, 255, 255)));
+        jLabel3.setName("jLabel3"); // NOI18N
+
+        jLabel4.setFont(new Font("Segoe UI Semibold", 1, 18)); // NOI18N
+        jLabel4.setForeground(new Color(255, 255, 255));
+        jLabel4.setHorizontalAlignment(SwingConstants.CENTER);
+        jLabel4.setText("  ALL USER");
+        jLabel4.setBorder(BorderFactory.createLineBorder(new Color(255, 255, 255)));
+        jLabel4.setName("jLabel4"); // NOI18N
+
+        GroupLayout jPanel4Layout = new GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(jPanel4Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGroup(jPanel4Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel3, GroupLayout.PREFERRED_SIZE, 230, GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4, GroupLayout.PREFERRED_SIZE, 230, GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 0, 0))
+        );
+        jPanel4Layout.setVerticalGroup(jPanel4Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addComponent(jLabel3, GroupLayout.PREFERRED_SIZE, 60, GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(jLabel4, GroupLayout.PREFERRED_SIZE, 60, GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setTitle("ISP MANAGEMENT SYSTEM");
         setName("Form"); // NOI18N
+        setResizable(false);
 
         jPanel1.setBackground(new Color(204, 204, 204));
         jPanel1.setName("jPanel1"); // NOI18N
@@ -231,7 +296,7 @@ private static ImageIcon rightIconResize;
                 jLabel1MouseClicked(evt);
             }
         });
-        jPanel2.add(jLabel1, new AbsoluteConstraints(0, 200, 230, 60));
+        jPanel2.add(jLabel1, new AbsoluteConstraints(0, 170, 230, 60));
 
         jLabel2.setBackground(new Color(153, 153, 153));
         jLabel2.setFont(new Font("Segoe UI Semibold", 1, 18)); // NOI18N
@@ -246,7 +311,7 @@ private static ImageIcon rightIconResize;
                 jLabel2MouseClicked(evt);
             }
         });
-        jPanel2.add(jLabel2, new AbsoluteConstraints(0, 280, 230, 60));
+        jPanel2.add(jLabel2, new AbsoluteConstraints(0, 250, 230, 60));
 
         jLabel6.setBackground(new Color(153, 153, 153));
         jLabel6.setFont(new Font("Segoe UI Semibold", 1, 18)); // NOI18N
@@ -261,13 +326,13 @@ private static ImageIcon rightIconResize;
                 jLabel6MouseClicked(evt);
             }
         });
-        jPanel2.add(jLabel6, new AbsoluteConstraints(0, 360, 230, 60));
+        jPanel2.add(jLabel6, new AbsoluteConstraints(0, 330, 230, 60));
 
         jLabel10.setBackground(new Color(153, 153, 153));
         jLabel10.setFont(new Font("Segoe UI Semibold", 1, 18)); // NOI18N
         jLabel10.setForeground(new Color(255, 255, 255));
         jLabel10.setHorizontalAlignment(SwingConstants.CENTER);
-        jLabel10.setText("BILLS");
+        jLabel10.setText("LOGOUT");
         jLabel10.setBorder(BorderFactory.createLineBorder(new Color(255, 255, 255)));
         jLabel10.setName("jLabel10"); // NOI18N
         jLabel10.setOpaque(true);
@@ -276,7 +341,7 @@ private static ImageIcon rightIconResize;
                 jLabel10MouseClicked(evt);
             }
         });
-        jPanel2.add(jLabel10, new AbsoluteConstraints(0, 520, 230, 60));
+        jPanel2.add(jLabel10, new AbsoluteConstraints(0, 710, 230, 60));
 
         jLabel11.setBackground(new Color(153, 153, 153));
         jLabel11.setFont(new Font("Segoe UI Semibold", 1, 18)); // NOI18N
@@ -291,7 +356,37 @@ private static ImageIcon rightIconResize;
                 jLabel11MouseClicked(evt);
             }
         });
-        jPanel2.add(jLabel11, new AbsoluteConstraints(0, 440, 230, 60));
+        jPanel2.add(jLabel11, new AbsoluteConstraints(0, 410, 230, 60));
+
+        jLabel16.setBackground(new Color(153, 153, 153));
+        jLabel16.setFont(new Font("Segoe UI Semibold", 1, 18)); // NOI18N
+        jLabel16.setForeground(new Color(255, 255, 255));
+        jLabel16.setHorizontalAlignment(SwingConstants.CENTER);
+        jLabel16.setText("BILLS");
+        jLabel16.setBorder(BorderFactory.createLineBorder(new Color(255, 255, 255)));
+        jLabel16.setName("jLabel16"); // NOI18N
+        jLabel16.setOpaque(true);
+        jLabel16.addMouseListener(new MouseAdapter() {
+            public void mouseClicked(MouseEvent evt) {
+                jLabel16MouseClicked(evt);
+            }
+        });
+        jPanel2.add(jLabel16, new AbsoluteConstraints(0, 490, 230, 60));
+
+        jLabel17.setBackground(new Color(153, 153, 153));
+        jLabel17.setFont(new Font("Segoe UI Semibold", 1, 18)); // NOI18N
+        jLabel17.setForeground(new Color(255, 255, 255));
+        jLabel17.setHorizontalAlignment(SwingConstants.CENTER);
+        jLabel17.setText("SETTINGS");
+        jLabel17.setBorder(BorderFactory.createLineBorder(new Color(255, 255, 255)));
+        jLabel17.setName("jLabel17"); // NOI18N
+        jLabel17.setOpaque(true);
+        jLabel17.addMouseListener(new MouseAdapter() {
+            public void mouseClicked(MouseEvent evt) {
+                jLabel17MouseClicked(evt);
+            }
+        });
+        jPanel2.add(jLabel17, new AbsoluteConstraints(0, 570, 230, 60));
 
         jPanel1.add(jPanel2, new AbsoluteConstraints(0, 0, 230, 780));
 
@@ -299,19 +394,268 @@ private static ImageIcon rightIconResize;
         jPanel3.setName("jPanel3"); // NOI18N
         jPanel3.setLayout(new AbsoluteLayout());
 
-        jInternalFrame1.setName("jInternalFrame1"); // NOI18N
-        jInternalFrame1.setVisible(true);
+        jPanel7.setForeground(new Color(255, 255, 255));
+        jPanel7.setName("jPanel7"); // NOI18N
+        jPanel7.setLayout(new AbsoluteLayout());
 
-        GroupLayout jInternalFrame1Layout = new GroupLayout(jInternalFrame1.getContentPane());
-        jInternalFrame1.getContentPane().setLayout(jInternalFrame1Layout);
-        jInternalFrame1Layout.setHorizontalGroup(jInternalFrame1Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        jInternalFrame1Layout.setVerticalGroup(jInternalFrame1Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
+        jPanel11.setBackground(new Color(52, 170, 115));
+        jPanel11.setName("jPanel11"); // NOI18N
+        jPanel11.setLayout(new AbsoluteLayout());
 
-        jPanel3.add(jInternalFrame1, new AbsoluteConstraints(70, 30, 830, 520));
+        jLabel19.setText("jLabel19");
+        jLabel19.setName("jLabel19"); // NOI18N
+        jPanel11.add(jLabel19, new AbsoluteConstraints(-330, 10, -1, -1));
+
+        jLabel39.setHorizontalAlignment(SwingConstants.CENTER);
+        jLabel39.setName("jLabel39"); // NOI18N
+        jPanel11.add(jLabel39, new AbsoluteConstraints(0, 0, 90, 80));
+
+        jLabel37.setFont(new Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel37.setForeground(new Color(255, 255, 255));
+        jLabel37.setHorizontalAlignment(SwingConstants.CENTER);
+        jLabel37.setText("0");
+        jLabel37.setName("jLabel37"); // NOI18N
+        jPanel11.add(jLabel37, new AbsoluteConstraints(70, 40, 140, 30));
+
+        jLabel38.setFont(new Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel38.setForeground(new Color(255, 255, 255));
+        jLabel38.setHorizontalAlignment(SwingConstants.CENTER);
+        jLabel38.setText("INACTIVE");
+        jLabel38.setName("jLabel38"); // NOI18N
+        jPanel11.add(jLabel38, new AbsoluteConstraints(90, 10, 90, -1));
+
+        jPanel7.add(jPanel11, new AbsoluteConstraints(720, 70, 240, 80));
+
+        jPanel12.setBackground(new Color(52, 170, 115));
+        jPanel12.setName("jPanel12"); // NOI18N
+        jPanel12.setLayout(new AbsoluteLayout());
+
+        jLabel34.setFont(new Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel34.setForeground(new Color(255, 255, 255));
+        jLabel34.setHorizontalAlignment(SwingConstants.CENTER);
+        jLabel34.setText("ACTIVE");
+        jLabel34.setName("jLabel34"); // NOI18N
+        jPanel12.add(jLabel34, new AbsoluteConstraints(100, 10, 80, -1));
+
+        jLabel35.setFont(new Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel35.setForeground(new Color(255, 255, 255));
+        jLabel35.setHorizontalAlignment(SwingConstants.CENTER);
+        jLabel35.setText("0");
+        jLabel35.setName("jLabel35"); // NOI18N
+        jPanel12.add(jLabel35, new AbsoluteConstraints(70, 40, 140, 30));
+
+        jLabel36.setHorizontalAlignment(SwingConstants.CENTER);
+        jLabel36.setName("jLabel36"); // NOI18N
+        jPanel12.add(jLabel36, new AbsoluteConstraints(0, 0, 90, 80));
+
+        jPanel7.add(jPanel12, new AbsoluteConstraints(410, 70, 240, 80));
+
+        jPanel14.setBackground(new Color(52, 170, 115));
+        jPanel14.setName("jPanel14"); // NOI18N
+        jPanel14.setPreferredSize(new Dimension(243, 132));
+        jPanel14.setLayout(new AbsoluteLayout());
+
+        jLabel40.setFont(new Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel40.setForeground(new Color(255, 255, 255));
+        jLabel40.setHorizontalAlignment(SwingConstants.CENTER);
+        jLabel40.setText("TODAY");
+        jLabel40.setName("jLabel40"); // NOI18N
+        jPanel14.add(jLabel40, new AbsoluteConstraints(100, 10, 80, -1));
+
+        jLabel22.setHorizontalAlignment(SwingConstants.CENTER);
+        jLabel22.setName("jLabel22"); // NOI18N
+        jPanel14.add(jLabel22, new AbsoluteConstraints(0, 0, 90, 80));
+
+        jLabel41.setFont(new Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel41.setForeground(new Color(255, 255, 255));
+        jLabel41.setHorizontalAlignment(SwingConstants.CENTER);
+        jLabel41.setText("0");
+        jLabel41.setName("jLabel41"); // NOI18N
+        jPanel14.add(jLabel41, new AbsoluteConstraints(70, 40, 140, 30));
+
+        jPanel7.add(jPanel14, new AbsoluteConstraints(90, 180, -1, 80));
+
+        jPanel15.setBackground(new Color(52, 170, 115));
+        jPanel15.setName("jPanel15"); // NOI18N
+        jPanel15.setLayout(new AbsoluteLayout());
+
+        jLabel21.setText("PACKAGES");
+        jLabel21.setToolTipText("");
+        jLabel21.setName("jLabel21"); // NOI18N
+        jPanel15.add(jLabel21, new AbsoluteConstraints(20, 20, -1, -1));
+
+        jPanel19.setBackground(new Color(52, 170, 115));
+        jPanel19.setName("jPanel19"); // NOI18N
+        jPanel19.setLayout(new AbsoluteLayout());
+
+        jLabel28.setText("DUE");
+        jLabel28.setToolTipText("");
+        jLabel28.setName("jLabel28"); // NOI18N
+        jPanel19.add(jLabel28, new AbsoluteConstraints(20, 20, -1, -1));
+
+        jPanel15.add(jPanel19, new AbsoluteConstraints(410, 400, 240, 120));
+
+        jPanel7.add(jPanel15, new AbsoluteConstraints(720, 290, 240, 80));
+
+        jPanel16.setBackground(new Color(52, 170, 115));
+        jPanel16.setName("jPanel16"); // NOI18N
+        jPanel16.setLayout(new AbsoluteLayout());
+
+        jLabel23.setHorizontalAlignment(SwingConstants.CENTER);
+        jLabel23.setName("jLabel23"); // NOI18N
+        jPanel16.add(jLabel23, new AbsoluteConstraints(0, 0, 90, 80));
+
+        jLabel42.setFont(new Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel42.setForeground(new Color(255, 255, 255));
+        jLabel42.setHorizontalAlignment(SwingConstants.CENTER);
+        jLabel42.setText("MONTH");
+        jLabel42.setName("jLabel42"); // NOI18N
+        jPanel16.add(jLabel42, new AbsoluteConstraints(100, 10, 80, -1));
+
+        jLabel43.setFont(new Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel43.setForeground(new Color(255, 255, 255));
+        jLabel43.setHorizontalAlignment(SwingConstants.CENTER);
+        jLabel43.setText("0");
+        jLabel43.setName("jLabel43"); // NOI18N
+        jPanel16.add(jLabel43, new AbsoluteConstraints(70, 40, 140, 30));
+
+        jPanel7.add(jPanel16, new AbsoluteConstraints(410, 180, 240, 80));
+
+        jPanel17.setBackground(new Color(52, 170, 115));
+        jPanel17.setName("jPanel17"); // NOI18N
+        jPanel17.setLayout(new AbsoluteLayout());
+
+        jLabel26.setText("COMPLAINTS");
+        jLabel26.setToolTipText("");
+        jLabel26.setName("jLabel26"); // NOI18N
+        jPanel17.add(jLabel26, new AbsoluteConstraints(20, 20, -1, -1));
+
+        jPanel7.add(jPanel17, new AbsoluteConstraints(720, 180, 240, 80));
+
+        jPanel18.setBackground(new Color(52, 170, 115));
+        jPanel18.setName("jPanel18"); // NOI18N
+        jPanel18.setLayout(new AbsoluteLayout());
+
+        jLabel27.setText("REQUEST");
+        jLabel27.setToolTipText("");
+        jLabel27.setName("jLabel27"); // NOI18N
+        jPanel18.add(jLabel27, new AbsoluteConstraints(20, 20, -1, -1));
+
+        jPanel7.add(jPanel18, new AbsoluteConstraints(90, 290, 240, 80));
+
+        jPanel20.setBackground(new Color(52, 170, 115));
+        jPanel20.setName("jPanel20"); // NOI18N
+        jPanel20.setLayout(new AbsoluteLayout());
+
+        jLabel29.setText("DUE");
+        jLabel29.setToolTipText("");
+        jLabel29.setName("jLabel29"); // NOI18N
+        jPanel20.add(jLabel29, new AbsoluteConstraints(20, 20, -1, -1));
+
+        jPanel21.setBackground(new Color(52, 170, 115));
+        jPanel21.setName("jPanel21"); // NOI18N
+        jPanel21.setLayout(new AbsoluteLayout());
+
+        jLabel30.setText("DUE");
+        jLabel30.setToolTipText("");
+        jLabel30.setName("jLabel30"); // NOI18N
+        jPanel21.add(jLabel30, new AbsoluteConstraints(20, 20, -1, -1));
+
+        jPanel20.add(jPanel21, new AbsoluteConstraints(410, 400, 240, 120));
+
+        jPanel7.add(jPanel20, new AbsoluteConstraints(410, 290, 240, 80));
+
+        jPanel9.setBackground(new Color(52, 170, 115));
+        jPanel9.setBorder(new LineBorder(new Color(242, 242, 242), 1, true));
+        jPanel9.setName("jPanel9"); // NOI18N
+        jPanel9.setPreferredSize(new Dimension(243, 132));
+        jPanel9.setLayout(new AbsoluteLayout());
+
+        jLabel20.setHorizontalAlignment(SwingConstants.CENTER);
+        jLabel20.setName("jLabel20"); // NOI18N
+        jPanel9.add(jLabel20, new AbsoluteConstraints(0, 0, 90, 80));
+
+        jLabel31.setFont(new Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel31.setForeground(new Color(255, 255, 255));
+        jLabel31.setHorizontalAlignment(SwingConstants.CENTER);
+        jLabel31.setText("0");
+        jLabel31.setName("jLabel31"); // NOI18N
+        jPanel9.add(jLabel31, new AbsoluteConstraints(70, 40, 140, 30));
+
+        jLabel33.setFont(new Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel33.setForeground(new Color(255, 255, 255));
+        jLabel33.setHorizontalAlignment(SwingConstants.CENTER);
+        jLabel33.setText("USER");
+        jLabel33.setName("jLabel33"); // NOI18N
+        jPanel9.add(jLabel33, new AbsoluteConstraints(100, 10, 80, -1));
+
+        jPanel7.add(jPanel9, new AbsoluteConstraints(90, 70, -1, 80));
+
+        jScrollPane1.setName("jScrollPane1"); // NOI18N
+
+        jTable1.setModel(new DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jTable1.setName("jTable1"); // NOI18N
+        jScrollPane1.setViewportView(jTable1);
+
+        jPanel7.add(jScrollPane1, new AbsoluteConstraints(10, 450, 1030, 180));
+
+        jLabel32.setFont(new Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel32.setHorizontalAlignment(SwingConstants.CENTER);
+        jLabel32.setText("DASHBOARD");
+        jLabel32.setName("jLabel32"); // NOI18N
+        jPanel7.add(jLabel32, new AbsoluteConstraints(0, 20, 1050, 30));
+
+        jLabel5.setFont(new Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel5.setHorizontalAlignment(SwingConstants.CENTER);
+        jLabel5.setText("LOGS");
+        jLabel5.setName("jLabel5"); // NOI18N
+        jPanel7.add(jLabel5, new AbsoluteConstraints(0, 400, 1050, 40));
+
+        jPanel3.add(jPanel7, new AbsoluteConstraints(10, 110, 1050, 640));
+
+        jLabel9.setFont(new Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel9.setHorizontalAlignment(SwingConstants.CENTER);
+        jLabel9.setText("<NAME OF COMPANY>");
+        jLabel9.setName("jLabel9"); // NOI18N
+        jPanel3.add(jLabel9, new AbsoluteConstraints(10, 30, 1050, 30));
+
+        jPanel8.setName("jPanel8"); // NOI18N
+        jPanel8.setOpaque(false);
+        jPanel8.setLayout(new AbsoluteLayout());
+
+        jLabel13.setText("DATE & TIME:");
+        jLabel13.setName("jLabel13"); // NOI18N
+        jPanel8.add(jLabel13, new AbsoluteConstraints(14, 8, -1, -1));
+
+        jLabel12.setText("<DATE & TIME>");
+        jLabel12.setName("jLabel12"); // NOI18N
+        jPanel8.add(jLabel12, new AbsoluteConstraints(93, 8, 91, -1));
+
+        jLabel14.setText("IN-CHARGE:");
+        jLabel14.setName("jLabel14"); // NOI18N
+        jPanel8.add(jLabel14, new AbsoluteConstraints(202, 8, -1, -1));
+
+        jLabel15.setText("<NAME OF INCHARGE>");
+        jLabel15.setName("jLabel15"); // NOI18N
+        jPanel8.add(jLabel15, new AbsoluteConstraints(281, 8, 140, -1));
+
+        jPanel3.add(jPanel8, new AbsoluteConstraints(0, 750, 1070, 30));
+
+        jLabel18.setFont(new Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel18.setHorizontalAlignment(SwingConstants.CENTER);
+        jLabel18.setText("ISP MANAGEMENT SYSTEM");
+        jLabel18.setName("jLabel18"); // NOI18N
+        jPanel3.add(jLabel18, new AbsoluteConstraints(10, 60, 1050, 30));
 
         jPanel1.add(jPanel3, new AbsoluteConstraints(230, 0, 1070, 780));
 
@@ -392,6 +736,14 @@ private static ImageIcon rightIconResize;
         // TODO add your handling code here:
     }//GEN-LAST:event_jLabel11MouseClicked
 
+    private void jLabel16MouseClicked(MouseEvent evt) {//GEN-FIRST:event_jLabel16MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel16MouseClicked
+
+    private void jLabel17MouseClicked(MouseEvent evt) {//GEN-FIRST:event_jLabel17MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel17MouseClicked
+
     public void hideAll(){
             
         /* Hide Jpanel5 */
@@ -415,13 +767,14 @@ private static ImageIcon rightIconResize;
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
+    public static void main(String args[]) throws UnsupportedLookAndFeelException {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
         
+        FlatLaf.setup(new FlatLightLaf());
         //</editor-fold>
 
         /* Create and display the form */
@@ -434,21 +787,67 @@ private static ImageIcon rightIconResize;
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     JDialog jDialog1;
-    JInternalFrame jInternalFrame1;
     JLabel jLabel1;
     JLabel jLabel10;
     JLabel jLabel11;
+    JLabel jLabel12;
+    JLabel jLabel13;
+    JLabel jLabel14;
+    JLabel jLabel15;
+    JLabel jLabel16;
+    JLabel jLabel17;
+    JLabel jLabel18;
+    JLabel jLabel19;
     JLabel jLabel2;
+    JLabel jLabel20;
+    JLabel jLabel21;
+    JLabel jLabel22;
+    JLabel jLabel23;
+    JLabel jLabel26;
+    JLabel jLabel27;
+    JLabel jLabel28;
+    JLabel jLabel29;
     JLabel jLabel3;
+    JLabel jLabel30;
+    JLabel jLabel31;
+    JLabel jLabel32;
+    JLabel jLabel33;
+    JLabel jLabel34;
+    JLabel jLabel35;
+    JLabel jLabel36;
+    JLabel jLabel37;
+    JLabel jLabel38;
+    JLabel jLabel39;
     JLabel jLabel4;
+    JLabel jLabel40;
+    JLabel jLabel41;
+    JLabel jLabel42;
+    JLabel jLabel43;
+    JLabel jLabel5;
     JLabel jLabel6;
     JLabel jLabel7;
     JLabel jLabel8;
+    JLabel jLabel9;
     JPanel jPanel1;
+    JPanel jPanel11;
+    JPanel jPanel12;
+    JPanel jPanel14;
+    JPanel jPanel15;
+    JPanel jPanel16;
+    JPanel jPanel17;
+    JPanel jPanel18;
+    JPanel jPanel19;
     JPanel jPanel2;
+    JPanel jPanel20;
+    JPanel jPanel21;
     JPanel jPanel3;
     JPanel jPanel4;
     JPanel jPanel5;
     JPanel jPanel6;
+    JPanel jPanel7;
+    JPanel jPanel8;
+    JPanel jPanel9;
+    JScrollPane jScrollPane1;
+    JTable jTable1;
     // End of variables declaration//GEN-END:variables
 }

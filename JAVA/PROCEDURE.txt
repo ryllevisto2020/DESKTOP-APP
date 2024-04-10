@@ -1,0 +1,64 @@
+REPORT VIEW(JASPERSOFT/JASPER REPORT)
+
+https://community.jaspersoft.com/knowledgebase/faq/jasperreports-library-tutorial/#wiki-header-3
+
+Libraries: Jasperreports
+
+1.Load XML File using JRXmlLoader
+2.Create MySql Connection using DriverManager.*
+3.Create Query using JRDesingQuery
+4.Create Query String using String
+5.Compile Report using JasperCompileManager.*
+6.Print Report using JasperFillManager.*
+7.View Report using JasperViewer.*
+
+---------------------------------------------------------------------------------------------------------------
+PROTOCOL(SSH)
+
+https://www.baeldung.com/java-ssh-connection
+
+Libraries: JSch
+
+1.Create SSH connection using JSch
+2.Create SSH session using .getSession(<Type your Username>,<Type your Host>,<Type your Port>)
+3.Create SSH configuration using .setConfig("StringHostKeyChecking","no")
+4.connect SSH using .connect
+5.Create Channel Exec using .openChannel("exec") or Create Channel Shell using .openChannel("shell")
+6.Set Command in Channel Exec using .setCommand(<Type your Command>)
+7.Create Response using ByteArrayOutputStream 
+8.Set Response in Channel Exec using .setOutputStream(<Type your Response from ByteArrayOutputStream>)
+9.Connection Channel Exec using .connect
+10. Disconnect Channel Exec using .disconnect
+11. Disconnect SSH session using .disconnect
+
+---------------------------------------------------------------------------------------------------------------
+PRINTING
+
+Libraries: pdfbox
+
+1.Get all Available PrintService from PrinterJob using .lookupPrintServices
+2.Set PDF file using File
+3.Load PDF file using Loader.loadPDF
+4.Load Printable Documents using PDFPrintable
+5.Create Printer from PrinterJob using .getPrinterJob
+6.Set Printer from PrintService to PrinterJob using .setPrintService
+7.Set Printable Documents from PDFPrintable to PrinterJob using .setPrintable
+8.Print the Documents from PrinterJob using .print
+9.(Optional Only) Open and Edit Page Attribute using PageDialog and PageFormat
+10.(Optional Only) Open and Edit Print Attribute using PrintDialog and PrintRequestAttributeSet
+
+---------------------------------------------------------------------------------------------------------------
+DOCUMENTS(PDF)
+
+https://howtodoinjava.com/java/library/read-generate-pdf-java-itext/
+
+Libraries: itextpdf
+
+1.Create Docs using Documents
+2.Set PDF file using File
+3.Load PDF file from File to FileOutputStream
+4.Create Writer using PdfWriter.*
+5.Open Writer and Docs
+6.Create Element using Paragraph
+7.Add Element from Paragraph to Docs
+8.Close Docs and Writer
