@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>file_handling_api</id>
+    <version>1.0.0</version>
+    <authors>file_handling_api</authors>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework="net7.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="E:\PROJECT - SCRATCH\PRACTICE CODE\2 DESKTOP APP AND CLI APP\C#.NET\TUTORIAL\GUI APPLICATION\API Class\file_handling_api\bin\Debug\net7.0\file_handling_api.dll" target="lib\net7.0\file_handling_api.dll" />
+  </files>
+</package>

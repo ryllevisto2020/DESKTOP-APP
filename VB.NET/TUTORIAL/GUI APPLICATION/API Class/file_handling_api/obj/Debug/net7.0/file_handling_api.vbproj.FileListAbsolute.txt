@@ -1,0 +1,12 @@
+E:\PROJECT - SCRATCH\PRACTICE CODE\2 DESKTOP APP AND CLI APP\VB.NET\TUTORIAL\GUI APPLICATION\API Class\file_handling_api\bin\Debug\net7.0\file_handling_api.deps.json
+E:\PROJECT - SCRATCH\PRACTICE CODE\2 DESKTOP APP AND CLI APP\VB.NET\TUTORIAL\GUI APPLICATION\API Class\file_handling_api\bin\Debug\net7.0\file_handling_api.dll
+E:\PROJECT - SCRATCH\PRACTICE CODE\2 DESKTOP APP AND CLI APP\VB.NET\TUTORIAL\GUI APPLICATION\API Class\file_handling_api\bin\Debug\net7.0\file_handling_api.pdb
+E:\PROJECT - SCRATCH\PRACTICE CODE\2 DESKTOP APP AND CLI APP\VB.NET\TUTORIAL\GUI APPLICATION\API Class\file_handling_api\obj\Debug\net7.0\file_handling_api.vbproj.AssemblyReference.cache
+E:\PROJECT - SCRATCH\PRACTICE CODE\2 DESKTOP APP AND CLI APP\VB.NET\TUTORIAL\GUI APPLICATION\API Class\file_handling_api\obj\Debug\net7.0\file_handling_api.GeneratedMSBuildEditorConfig.editorconfig
+E:\PROJECT - SCRATCH\PRACTICE CODE\2 DESKTOP APP AND CLI APP\VB.NET\TUTORIAL\GUI APPLICATION\API Class\file_handling_api\obj\Debug\net7.0\file_handling_api.AssemblyInfoInputs.cache
+E:\PROJECT - SCRATCH\PRACTICE CODE\2 DESKTOP APP AND CLI APP\VB.NET\TUTORIAL\GUI APPLICATION\API Class\file_handling_api\obj\Debug\net7.0\file_handling_api.AssemblyInfo.vb
+E:\PROJECT - SCRATCH\PRACTICE CODE\2 DESKTOP APP AND CLI APP\VB.NET\TUTORIAL\GUI APPLICATION\API Class\file_handling_api\obj\Debug\net7.0\file_handling_api.vbproj.CoreCompileInputs.cache
+E:\PROJECT - SCRATCH\PRACTICE CODE\2 DESKTOP APP AND CLI APP\VB.NET\TUTORIAL\GUI APPLICATION\API Class\file_handling_api\obj\Debug\net7.0\file_handling_api.dll
+E:\PROJECT - SCRATCH\PRACTICE CODE\2 DESKTOP APP AND CLI APP\VB.NET\TUTORIAL\GUI APPLICATION\API Class\file_handling_api\obj\Debug\net7.0\refint\file_handling_api.dll
+E:\PROJECT - SCRATCH\PRACTICE CODE\2 DESKTOP APP AND CLI APP\VB.NET\TUTORIAL\GUI APPLICATION\API Class\file_handling_api\obj\Debug\net7.0\file_handling_api.pdb
+E:\PROJECT - SCRATCH\PRACTICE CODE\2 DESKTOP APP AND CLI APP\VB.NET\TUTORIAL\GUI APPLICATION\API Class\file_handling_api\obj\Debug\net7.0\ref\file_handling_api.dll
