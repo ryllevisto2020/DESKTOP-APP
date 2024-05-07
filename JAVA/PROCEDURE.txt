@@ -62,3 +62,7 @@ Libraries: itextpdf
 6.Create Element using Paragraph
 7.Add Element from Paragraph to Docs
 8.Close Docs and Writer
+9.(Optional Only) Create Cell using PdfPCell
+10.(Optional Only) Create Table using PdfPTable(<type Number of Columns>)
+11.(Optional Only) Add Cell to Table
+12.(Optional Only) Add Table to Docs

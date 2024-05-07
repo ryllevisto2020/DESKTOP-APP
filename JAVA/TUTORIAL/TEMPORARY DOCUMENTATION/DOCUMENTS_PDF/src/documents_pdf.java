@@ -5,6 +5,8 @@ import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.Paragraph;
 import com.itextpdf.text.pdf.PdfCopy;
 import com.itextpdf.text.pdf.PdfDocument;
+import com.itextpdf.text.pdf.PdfPCell;
+import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
 import java.io.File;
 import java.io.FileInputStream;
@@ -37,9 +39,19 @@ public class documents_pdf {
         writer.open();
         docs.open();
         
-        Paragraph para = new Paragraph("awd");
-        para.setAlignment(Paragraph.ALIGN_CENTER);
-        docs.add(para);
+        com.itextpdf.text.pdf.PdfPCell cell1 = new PdfPCell();
+        cell1.addElement(new Paragraph("awd"));
+        cell1.addElement(new Paragraph("awdawd"));
+        
+        com.itextpdf.text.pdf.PdfPCell cell = new PdfPCell();
+        cell.addElement(new Paragraph("test"));
+        cell.addElement(new Paragraph("testtest"));
+        PdfPTable table1 = new PdfPTable(2);
+        
+        table1.addCell(cell1);
+        table1.addCell(cell);
+        
+        docs.add(table1);
         
         docs.close();
         writer.close();
